@@ -1,0 +1,99 @@
+.contents{
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  gap: 100px;
+  column-gap: 2px;
+
+  justify-content: space-evenly;
+  justify-items: center;
+  align-content: space-evenly;
+  align-items: center;
+
+  font-family: 'Press Gothic';
+}
+
+@media screen and (min-width: 1400px) and (max-width: 2100px){
+  .contents{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 100px;
+    column-gap: 2px;
+  }
+}
+
+.text{
+  padding-left: 100px;
+}
+
+.column{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 774px;
+  height: 790;
+  padding-top: 44px;
+  padding-bottom: 44px;
+}
+
+.date, .time, .timeInfo{
+  background: var(--main-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.date{
+  font-size: 80px;
+}
+.time{
+  font-size: 200px;
+}
+.timeInfo{
+  font-size: 90px;
+}
+.error{
+  font-size: 80px;
+  background: var(--error-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.buttons{
+  display: flex;
+  flex-direction: column;
+  gap: 92px;
+
+  width: 476px;
+  height: 576px;
+}
+
+.clockIn-btn, .clockOut-btn, .clear-btn{
+  gap: 10px;
+  font-size: 94px;
+  width: 475px;
+  height: 130px;
+  font-family: 'Press Gothic';
+
+  color: var(--btn-text);
+  border-radius: 30px;
+  border: none;
+}
+
+.clockIn-btn{
+  background: var(--time-in-bg);
+}
+.clockOut-btn{
+  background: var(--time-out-bg);
+}
+.clear-btn{
+  background: var(--clear-bg);
+}
+
+.clockIn-btn:hover, .clockOut-btn:hover, .clear-btn:hover{
+  background: none;
+  cursor: pointer;
+  border: 2px solid white;
+}
